@@ -1,1 +1,143 @@
-<h1>Data Studio</h1>
+<!doctype html>
+<html>
+<head>
+  
+  <title>Data Studio</title>
+  
+  <meta charset="UTF-8">
+  <base href="/">
+  
+  <style id="ewaLoaderCss" type="text/css">
+    html { font-family: sans-serif; line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } body { margin: 0 } article, aside, footer, header, nav, section { display: block } h1 { font-size: 2em; margin: 0.67em 0; } figcaption, figure, main { display: block; } figure { margin: 1em 40px } hr { box-sizing: content-box; height: 0; overflow: visible; } pre { font-family: monospace, monospace; font-size: 1em; } a { background-color: transparent; -webkit-text-decoration-skip: objects; } a:active, a:hover { outline-width: 0 } abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted; } b, strong { font-weight: inherit } b, strong { font-weight: bolder } code, kbd, samp { font-family: monospace, monospace; font-size: 1em; } dfn { font-style: italic } mark { background-color: #ff0; color: #000; } small { font-size: 80% } sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } sub { bottom: -0.25em } sup { top: -0.5em } audio, video { display: inline-block } audio:not([controls]) { display: none; height: 0; } img { border-style: none } svg:not(:root) { overflow: hidden } button, input, optgroup, select, textarea { font-family: sans-serif; font-size: 100%; line-height: 1.15; margin: 0; } button, input { overflow: visible; } button, select { text-transform: none; } button, html [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; } button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; } button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; } fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; } legend { box-sizing: border-box; color: inherit; display: table; max-width: 100%; padding: 0; white-space: normal; } progress { display: inline-block; vertical-align: baseline; } textarea { overflow: auto } [type="checkbox"], [type="radio"] { box-sizing: border-box; padding: 0; } [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; } [type="search"] { -webkit-appearance: textfield; outline-offset: -2px; } [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration { -webkit-appearance: none; } ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; } details, menu { display: block } summary { display: list-item } canvas { display: inline-block } template { display: none } [hidden] { display: none } html, body { -webkit-user-select: none; cursor: default; } div#loadingOverlay { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 10000; background-color: #fff; transition: opacity 444ms ease; } div#loadingOverlay .status-indicator-wrapper { text-align: center; white-space: nowrap; height: 100%; } div#loadingOverlay .status-indicator-wrapper div { vertical-align: middle; display: inline-block; } div#loadingOverlay .status-indicator-wrapper div.lhs-valign-helper { width: 1%; height: 100%; } div#loadingOverlay .status-indicator-wrapper div.rhs-valign-helper { width: 1%; height: 100%; } div#loadingOverlay .status-indicator-wrapper div.status-indicator { position: relative; overflow: hidden; transition: opacity 888ms ease; } div#loadingOverlay .status-indicator-wrapper div.status-indicator div.progress-indicator { position: absolute; height: 256px; width: 256px; background-color: #fff; opacity: 0.6; transition: transform 88ms ease-out; } div#loadingOverlay .status-indicator-wrapper div.status-indicator img { transition: opacity 222ms ease-in; } div#loadingOverlay .status-indicator-wrapper div.status-indicator div.after-intro-logo { background: url("images/logo-web.png"); background-size: 100%; background-position: center center; width: 440px; height: 200px; opacity: 1; background-repeat: no-repeat; transition: opacity 800ms ease; } img#ewaLoaderLogo { opacity: 0; }
+    html, body { background-color: #fff; height: 100%; overflow: hidden; }
+  </style>
+  
+</head>
+<body>
+
+  <script>
+    if (typeof Object.assign != 'function') {
+      Object.assign = function(target, varArgs) { // .length of function is 2
+        'use strict';
+        if (target == null) { // TypeError if undefined or null
+          throw new TypeError('Cannot convert undefined or null to object');
+        }
+
+        var to = Object(target);
+
+        for (var index = 1; index < arguments.length; index++) {
+          var nextSource = arguments[index];
+
+          if (nextSource != null) { // Skip over if undefined or null
+            for (var nextKey in nextSource) {
+              // Avoid bugs when hasOwnProperty is shadowed
+              if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                to[nextKey] = nextSource[nextKey];
+              }
+            }
+          }
+        }
+        return to;
+      };
+    }
+  </script>
+
+  <script id="ewaLoaderInitJs">
+  
+    /** 
+     * Copyright (c) 2017 Callan Peter Milne
+     * 
+     * Permission to use, copy, modify, and/or distribute this software for any
+     * purpose with or without fee is hereby granted, provided that the above 
+     * copyright notice and this permission notice appear in all copies.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+     * REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+     * AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+     * INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+     * LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+     * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+     * PERFORMANCE OF THIS SOFTWARE.
+     */'use strict';
+
+    (function(E,v,i,r,a,t,e,c){"use strict";
+
+      var window;
+      var document;
+      var webApp;
+
+      window = E;
+      document = window.document;
+
+      webApp = new WebApp('EviratecWebApp', document.body);
+
+      function WebApp (name, baseEl) {
+
+        var appScriptEl;
+        var webAppRootEl;
+
+        init();
+
+        function init () {
+        
+          baseEl.setAttribute('ng-app', name);
+
+          appScriptEl = createAppJsScriptEl();
+          appScriptEl.$el.addEventListener('load', function () {
+            webAppRootEl = createAppRootEl();
+            baseEl.appendChild(webAppRootEl.$el);
+          });
+          baseEl.appendChild(appScriptEl.$el);
+
+          
+        }
+
+        function createAppRootEl () {
+          return new NewElem('web-app-root');
+        }
+
+        function createAppJsScriptEl () {
+          return new NewElem('script', {
+            id: 'appJs',
+            src: 'https://data-studio.github.io/app.js',
+          });
+        }
+
+      }
+
+      function NewElem (type, attrs) {
+        
+        var attrKeys;
+        var hasAttrs;
+        var newElem;
+
+        newElem = this;
+        type = type || 'div';
+
+        this.type = type;
+        this.$el = document.createElement(type);
+
+        attrs = attrs || {};
+
+        attrKeys = Object.keys(attrs);
+        hasAttrs = attrKeys.length > 0;
+
+        if (hasAttrs) {
+          attrKeys.forEach(setupElemAttr)
+        }
+
+        function setupElemAttr (key) {
+          var value;
+          value = attrs[key];
+          newElem.$el.setAttribute(key, value);
+        }
+
+      }
+
+    })(window);
+
+  </script>
+  
+  <img id="ewaLoaderLogo"
+    src="https://s3-ap-southeast-2.amazonaws.com/landing-page.eviratec.software/www/images/logov7c-dist.png">
+  
