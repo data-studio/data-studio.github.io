@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <base href="https://data-studio.github.io/">
   
-  <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Oswald" rel="stylesheet">
   
   <style id="ewaLoaderCss" type="text/css">
     html { font-family: sans-serif; line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } 
@@ -22,6 +22,46 @@
       display: block;
     }
     html, body { background-color: #fff; height: 100%; overflow: hidden; }
+    h1 {
+      border-top: 1px solid rgba(0,0,0,0.12);
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      line-height: 2.2em;
+      text-align: center;
+      font-size: 3em;
+    }
+
+    #intro .main-menu {
+      margin: 0;
+      padding: 16px;
+      list-style-type: none;
+    }
+
+    #intro .main-menu li {
+      text-align: center;
+      margin: 16px;
+    }
+
+    #intro .main-menu li a {
+      line-height: 1;
+      display: inline-block;
+      width: 400px;
+      font-size: 1.3em;
+      padding: 16px 0;
+      background-color: #0091EA;
+      text-decoration: none;
+      color: rgba(255,255,255,1);
+      border-radius: 3px;
+      background-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 100%);
+      border-bottom: 1px solid #0277BD;
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    #intro p {
+      margin: 16px;
+      font-size: 0.87em;
+      color: rgba(0,0,0,0.87);
+    }
   </style>
   
 </head>
@@ -158,8 +198,11 @@
     <ul class="main-menu">
       <li><a href="#">Getting Started</a></li>
       <li><a href="#">Documentation</a></li>
-      <li><a href="#">Find Apps & Services</a></li>
-      <li><a href="#">Apps & Services Development</a></li>
+      <li><a href="#">APP / Angular</a></li>
+      <li><a href="#">SVC / Auth</a></li>
+      <li><a href="#">SVC / Entity</a></li>
     </ul>
+    <p>github.com / <a href="https://github.com/data-studio/data-studio">data-studio</a></p>
+    <p>Copyright &copy; 2017 <a href="https://github.com/eviratec">Callan Peter Milne</a></p>
   </div>
   
