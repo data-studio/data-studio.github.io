@@ -8,37 +8,145 @@
   <base href="https://data-studio.github.io/">
   
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Oswald:400,600" rel="stylesheet">
+  <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet" type="text/css">
   
   <link href="app.css" rel="stylesheet">
   
 </head>
 <body>
+  
+  <header>
+    <img id="ewaLoaderLogo"
+      src="data-studio.png">
+    <h1>Data Studio</h1>
+  </header>
 
-  <script>
-    if (typeof Object.assign != 'function') {
-      Object.assign = function(target, varArgs) { // .length of function is 2
-        'use strict';
-        if (target == null) { // TypeError if undefined or null
-          throw new TypeError('Cannot convert undefined or null to object');
-        }
+  <section id="intro">
+    <nav id="mainMenu">
+      <ul class="menu-root">
+        <li class="top-level-item"><a href="#">Getting Started</a></li>
+        <li class="top-level-item"><a href="#">Documentation</a></li>
+        <li class="top-level-item"><a href="https://github.com/data-studio/angular-app">Angular <strong>APP</strong></a></li>
+        <li class="top-level-item"><a href="#">Auth <strong>SVC</strong></a></li>
+        <li class="top-level-item"><a href="https://github.com/data-studio/entity-svc">Entity <strong>SVC</strong></a></li>
+      </ul>
+    </nav>
+  </section>
 
-        var to = Object(target);
-
-        for (var index = 1; index < arguments.length; index++) {
-          var nextSource = arguments[index];
-
-          if (nextSource != null) { // Skip over if undefined or null
-            for (var nextKey in nextSource) {
-              // Avoid bugs when hasOwnProperty is shadowed
-              if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-                to[nextKey] = nextSource[nextKey];
-              }
-            }
-          }
-        }
-        return to;
-      };
+  <footer>
+    <p>github.com / <a href="https://github.com/data-studio/data-studio">data-studio</a></p>
+    <p>Created by <a href="https://www.eviratec.com.au">Eviratec</a></p>
+    <p>Copyright &copy; 2017 <a href="https://github.com/eviratec">Callan Peter Milne</a></p>
+  </footer>
+  
+  <style id="dataStudioStylesheet" type="text/css">
+  
+    /** 
+     * Copyright (c) 2017 Callan Peter Milne
+     * 
+     * Permission to use, copy, modify, and/or distribute this software for any
+     * purpose with or without fee is hereby granted, provided that the above 
+     * copyright notice and this permission notice appear in all copies.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+     * REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+     * AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+     * INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+     * LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+     * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+     * PERFORMANCE OF THIS SOFTWARE.
+     */
+    
+    h1, h2, h3 { font-family: 'Bree Serif', serif; font-weight: 500; }
+    html, body { height: 100%; width: 100%; overflow: hidden; }
+    body { background-color: #fff; overflow-y: scroll; }
+    header {
+      background-color: #424242;
+      text-align: center;
+      padding-top: 32px;
     }
+    header h1 {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      line-height: 1;
+      text-align: center;
+      font-size: 3em;
+      color: rgba(255,255,255,0.5);
+      background: #424242;
+      padding: 24px 0 32px;
+    }
+    header img#ewaLoaderLogo {
+      opacity: 1;
+      width: 128px;
+      height: 128px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    nav#mainMenu ul {
+      margin: 0 auto;
+      padding: 16px;
+      list-style-type: none;
+      width: 440px;
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item {
+      text-align: center;
+      margin: 16px;
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item > a {
+      line-height: 1;
+      display: inline-block;
+      width: 400px;
+      font-size: 1.3em;
+      padding: 16px 0;
+      background-color: #0091EA;
+      text-decoration: none;
+      color: rgba(255,255,255,1);
+      border-radius: 3px;
+      background-image: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+      border-bottom: 1px solid #0277BD;
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item > a strong {
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+    }
+
+    footer {
+      margin-top: 24px;
+      border-top: 1px solid rgba(0,0,0,0.12);
+      padding: 24px 0 32px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 16px;
+      font-size: 0.77rem;
+      color: rgba(0,0,0,0.58);
+      color: rgba(0,0,0,0.87);
+      text-align: center;
+    }
+
+    footer p a {
+      text-decoration: none;
+      color: #6200EA;
+    }
+
+    footer p:nth-of-type(1) {
+      font-size: 1rem;
+    }
+
+    footer p:nth-of-type(1) a {
+      font-weight: 600;
+    }
+  </style>
+  
+  <script>
   </script>
 
   <script id="ewaLoaderInitJs">
@@ -57,7 +165,34 @@
      * LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
      * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
      * PERFORMANCE OF THIS SOFTWARE.
-     */'use strict';
+     */
+    
+    (function(P,o,l,y,f,i,ll){"use strict";
+      if (typeof P.assign != 'function') {
+        P.assign = function(target, varArgs) { // .length of function is 2
+          'use strict';
+          if (target == null) { // TypeError if undefined or null
+            throw new TypeError('Cannot convert undefined or null to object');
+          }
+
+          var to = P(target);
+
+          for (var index = 1; index < arguments.length; index++) {
+            var nextSource = arguments[index];
+
+            if (nextSource != null) { // Skip over if undefined or null
+              for (var nextKey in nextSource) {
+                // Avoid bugs when hasOwnProperty is shadowed
+                if (P.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                  to[nextKey] = nextSource[nextKey];
+                }
+              }
+            }
+          }
+          return to;
+        };
+      }
+    })(Object);
 
     (function(E,v,i,r,a,t,e,c){"use strict";
 
@@ -136,116 +271,3 @@
     })(window);
 
   </script>
-  
-  <header>
-    <img id="ewaLoaderLogo"
-      src="data-studio.png">
-    <h1>Data Studio</h1>
-  </header>
-
-  <section id="intro">
-    <nav id="mainMenu">
-      <ul class="menu-root">
-        <li class="top-level-item"><a href="#">Getting Started</a></li>
-        <li class="top-level-item"><a href="#">Documentation</a></li>
-        <li class="top-level-item"><a href="https://github.com/data-studio/angular-app">Angular <strong>APP</strong></a></li>
-        <li class="top-level-item"><a href="#">Auth <strong>SVC</strong></a></li>
-        <li class="top-level-item"><a href="https://github.com/data-studio/entity-svc">Entity <strong>SVC</strong></a></li>
-      </ul>
-    </nav>
-  </section>
-
-  <footer>
-    <p>github.com / <a href="https://github.com/data-studio/data-studio">data-studio</a></p>
-    <p>Copyright &copy; 2017 <a href="https://github.com/eviratec">Callan Peter Milne</a></p>
-  </footer>
-  
-  <style id="dataStudioStylesheet" type="text/css">
-    h1, h2, h3 { font-family: 'Bree Serif', serif; font-weight: 500; }
-    html, body { height: 100%; width: 100%; overflow: hidden; }
-    body { background-color: #fff; overflow-y: scroll; }
-    header {
-      background-color: #424242;
-      text-align: center;
-      padding-top: 32px;
-    }
-    header h1 {
-      border-top: 1px solid rgba(255,255,255,0.12);
-      border-bottom: 1px solid rgba(0,0,0,0.12);
-      line-height: 1;
-      text-align: center;
-      font-size: 3em;
-      color: rgba(255,255,255,0.5);
-      background: #424242;
-      padding: 24px 0 32px;
-    }
-    header img#ewaLoaderLogo {
-      opacity: 1;
-      width: 128px;
-      height: 128px;
-      margin: 0 auto;
-      display: block;
-    }
-
-    nav#mainMenu ul {
-      margin: 0 auto;
-      padding: 16px;
-      list-style-type: none;
-      width: 440px;
-      background-color: rgba(255,255,255,0.1);
-    }
-
-    nav#mainMenu ul.menu-root li.top-level-item {
-      text-align: center;
-      margin: 16px;
-    }
-
-    nav#mainMenu ul.menu-root li.top-level-item > a {
-      line-height: 1;
-      display: inline-block;
-      width: 400px;
-      font-size: 1.3em;
-      padding: 16px 0;
-      background-color: #0091EA;
-      text-decoration: none;
-      color: rgba(255,255,255,1);
-      border-radius: 3px;
-      background-image: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
-      border-bottom: 1px solid #0277BD;
-      text-transform: uppercase;
-      font-family: 'Oswald', sans-serif;
-    }
-
-    nav#mainMenu ul.menu-root li.top-level-item > a strong {
-      font-weight: 600;
-      color: rgba(255,255,255,0.5);
-    }
-
-    footer {
-      margin-top: 24px;
-      border-top: 1px solid rgba(0,0,0,0.12);
-      padding: 24px 0 32px;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 16px;
-      font-size: 1rem;
-      color: rgba(0,0,0,0.87);
-      text-align: center;
-    }
-
-    footer p a {
-      text-decoration: none;
-      color: #6200EA;
-    }
-
-    footer p:nth-of-type(1) a {
-      font-weight: 600;
-    }
-
-    footer p:nth-of-type(2) {
-      font-size: 0.77em;
-      color: rgba(0,0,0,0.58);
-    }
-  </style>
