@@ -9,97 +9,7 @@
   
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Oswald:400,600" rel="stylesheet">
   
-  <style id="ewaLoaderCss" type="text/css">
-    html { font-family: sans-serif; line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; } 
-    body { margin: 0 } article, aside, footer, header, nav, section { display: block } 
-    h1 { font-size: 2em; margin: 0.67em 0; } figcaption, figure, main { display: block; } figure { margin: 1em 40px } hr { box-sizing: content-box; height: 0; overflow: visible; } pre { font-family: monospace, monospace; font-size: 1em; } a { background-color: transparent; -webkit-text-decoration-skip: objects; } a:active, a:hover { outline-width: 0 } abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted; } b, strong { font-weight: inherit } b, strong { font-weight: bolder } code, kbd, samp { font-family: monospace, monospace; font-size: 1em; } dfn { font-style: italic } mark { background-color: #ff0; color: #000; } small { font-size: 80% } sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } sub { bottom: -0.25em } sup { top: -0.5em } audio, video { display: inline-block } audio:not([controls]) { display: none; height: 0; } img { border-style: none } svg:not(:root) { overflow: hidden } button, input, optgroup, select, textarea { font-family: sans-serif; font-size: 100%; line-height: 1.15; margin: 0; } button, input { overflow: visible; } button, select { text-transform: none; } button, html [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; } button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; } button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; } fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; } legend { box-sizing: border-box; color: inherit; display: table; max-width: 100%; padding: 0; white-space: normal; } progress { display: inline-block; vertical-align: baseline; } textarea { overflow: auto } [type="checkbox"], [type="radio"] { box-sizing: border-box; padding: 0; } [type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; } [type="search"] { -webkit-appearance: textfield; outline-offset: -2px; } [type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration { -webkit-appearance: none; } ::-webkit-file-upload-button { -webkit-appearance: button; font: inherit; } details, menu { display: block } summary { display: list-item } canvas { display: inline-block } template { display: none } [hidden] { display: none } html, body { -webkit-user-select: none; cursor: default; } div#loadingOverlay { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 10000; background-color: #fff; transition: opacity 444ms ease; } div#loadingOverlay .status-indicator-wrapper { text-align: center; white-space: nowrap; height: 100%; } div#loadingOverlay .status-indicator-wrapper div { vertical-align: middle; display: inline-block; } div#loadingOverlay .status-indicator-wrapper div.lhs-valign-helper { width: 1%; height: 100%; } div#loadingOverlay .status-indicator-wrapper div.rhs-valign-helper { width: 1%; height: 100%; } div#loadingOverlay .status-indicator-wrapper div.status-indicator { position: relative; overflow: hidden; transition: opacity 888ms ease; } div#loadingOverlay .status-indicator-wrapper div.status-indicator div.progress-indicator { position: absolute; height: 256px; width: 256px; background-color: #fff; opacity: 0.6; transition: transform 88ms ease-out; } div#loadingOverlay .status-indicator-wrapper div.status-indicator img { transition: opacity 222ms ease-in; } div#loadingOverlay .status-indicator-wrapper div.status-indicator div.after-intro-logo { background: url("images/logo-web.png"); background-size: 100%; background-position: center center; width: 440px; height: 200px; opacity: 1; background-repeat: no-repeat; transition: opacity 800ms ease; } 
-    h1, h2, h3 { font-family: 'Bree Serif', serif; font-weight: 500; }
-    html, body { background-color: #fff; height: 100%; overflow: hidden; }
-    header {
-      background-color: #424242;
-      text-align: center;
-      padding-top: 32px;
-    }
-    header h1 {
-      border-top: 1px solid rgba(255,255,255,0.12);
-      border-bottom: 1px solid rgba(0,0,0,0.12);
-      line-height: 1;
-      text-align: center;
-      font-size: 3em;
-      color: rgba(255,255,255,0.5);
-      background: #424242;
-      padding: 24px 0 32px;
-    }
-    header img#ewaLoaderLogo {
-      opacity: 1;
-      width: 256px;
-      height: 256px;
-      margin: 2em auto;
-      display: block;
-    }
-
-    nav#mainMenu {
-      margin: 0 auto;
-      padding: 16px;
-      list-style-type: none;
-      width: 440px;
-      background-color: rgba(255,255,255,0.1);
-    }
-
-    nav#mainMenu ul.menu-root li.top-level-item {
-      text-align: center;
-      margin: 16px;
-    }
-
-    nav#mainMenu ul.menu-root li.top-level-item > a {
-      line-height: 1;
-      display: inline-block;
-      width: 400px;
-      font-size: 1.3em;
-      padding: 16px 0;
-      background-color: #0091EA;
-      text-decoration: none;
-      color: rgba(255,255,255,1);
-      border-radius: 3px;
-      background-image: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
-      border-bottom: 1px solid #0277BD;
-      text-transform: uppercase;
-      font-family: 'Oswald', sans-serif;
-    }
-    
-    nav#mainMenu ul.menu-root li.top-level-item > a strong {
-      font-weight: 600;
-      color: rgba(255,255,255,0.5);
-    }
-
-    footer {
-      margin-top: 24px;
-      border-top: 1px solid rgba(0,0,0,0.12);
-      padding: 24px 0 32px;
-      text-align: center;
-    }
-    
-    footer p {
-      margin: 16px;
-      font-size: 1rem;
-      color: rgba(0,0,0,0.87);
-      text-align: center;
-    }
-    
-    footer p a {
-      text-decoration: none;
-      color: #6200EA;
-    }
-
-    footer p:nth-of-type(1) a {
-      font-weight: 600;
-    }
-
-    footer p:nth-of-type(2) {
-      font-size: 0.77em;
-      color: rgba(0,0,0,0.58);
-    }
-  </style>
+  <link href="app.css" rel="stylesheet">
   
 </head>
 <body>
@@ -249,4 +159,92 @@
     <p>github.com / <a href="https://github.com/data-studio/data-studio">data-studio</a></p>
     <p>Copyright &copy; 2017 <a href="https://github.com/eviratec">Callan Peter Milne</a></p>
   </footer>
- 
+  
+  <style id="dataStudioStylesheet" type="text/css">
+    h1, h2, h3 { font-family: 'Bree Serif', serif; font-weight: 500; }
+    html, body { background-color: #fff; height: 100%; overflow: hidden; }
+    header {
+      background-color: #424242;
+      text-align: center;
+      padding-top: 32px;
+    }
+    header h1 {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      line-height: 1;
+      text-align: center;
+      font-size: 3em;
+      color: rgba(255,255,255,0.5);
+      background: #424242;
+      padding: 24px 0 32px;
+    }
+    header img#ewaLoaderLogo {
+      opacity: 1;
+      width: 256px;
+      height: 256px;
+      margin: 2em auto;
+      display: block;
+    }
+
+    nav#mainMenu {
+      margin: 0 auto;
+      padding: 16px;
+      list-style-type: none;
+      width: 440px;
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item {
+      text-align: center;
+      margin: 16px;
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item > a {
+      line-height: 1;
+      display: inline-block;
+      width: 400px;
+      font-size: 1.3em;
+      padding: 16px 0;
+      background-color: #0091EA;
+      text-decoration: none;
+      color: rgba(255,255,255,1);
+      border-radius: 3px;
+      background-image: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+      border-bottom: 1px solid #0277BD;
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item > a strong {
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+    }
+
+    footer {
+      margin-top: 24px;
+      border-top: 1px solid rgba(0,0,0,0.12);
+      padding: 24px 0 32px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 16px;
+      font-size: 1rem;
+      color: rgba(0,0,0,0.87);
+      text-align: center;
+    }
+
+    footer p a {
+      text-decoration: none;
+      color: #6200EA;
+    }
+
+    footer p:nth-of-type(1) a {
+      font-weight: 600;
+    }
+
+    footer p:nth-of-type(2) {
+      font-size: 0.77em;
+      color: rgba(0,0,0,0.58);
+    }
+  </style>
