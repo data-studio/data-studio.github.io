@@ -34,10 +34,10 @@
   <section id="intro">
     <nav id="mainMenu">
       <ul class="menu-root">
-        <li class="top-level-item"><a href="#">Getting Started</a></li>
-        <li class="top-level-item"><a href="#">Documentation</a></li>
+        <li class="top-level-item"><a href="#" class="unready">Getting Started</a></li>
+        <li class="top-level-item"><a href="#" class="unready">Documentation</a></li>
         <li class="top-level-item"><a href="https://github.com/data-studio/angular-app">Angular <strong>APP</strong></a></li>
-        <li class="top-level-item"><a href="#">Auth <strong>SVC</strong></a></li>
+        <li class="top-level-item"><a href="#" class="unready">Auth <strong>SVC</strong></a></li>
         <li class="top-level-item"><a href="https://github.com/data-studio/entity-svc">Entity <strong>SVC</strong></a></li>
       </ul>
     </nav>
@@ -131,6 +131,17 @@
     nav#mainMenu ul.menu-root li.top-level-item > a strong {
       font-weight: 600;
       color: rgba(255,255,255,0.5);
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item > a.unready {
+      background-color: #ddd;
+      border-bottom: 1px solid #ccc;
+      cursor: default;
+    }
+    
+    nav#mainMenu ul.menu-root li.top-level-item > a.unready,
+    nav#mainMenu ul.menu-root li.top-level-item > a.unready strong {
+      color: rgba(0,0,0,0.37);
     }
 
     footer {
