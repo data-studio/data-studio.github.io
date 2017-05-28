@@ -31,6 +31,12 @@
       color: rgba(255,255,255,0.5);
       background: #424242;
     }
+    footer {
+      margin-top: 24px;
+      border-top: 1px solid rgba(0,0,0,0.12);
+      padding: 24px 0 32px;
+      text-align: center;
+    }
 
     nav#mainMenu {
       margin: 0 auto;
@@ -40,12 +46,12 @@
       background-color: rgba(255,255,255,0.1);
     }
 
-    nav#mainMenu li {
+    nav#mainMenu ul.menu-root li.top-level-item {
       text-align: center;
       margin: 16px;
     }
 
-    nav#mainMenu li a {
+    nav#mainMenu ul.menu-root li.top-level-item > a {
       line-height: 1;
       display: inline-block;
       width: 400px;
@@ -61,7 +67,7 @@
       font-family: 'Oswald', sans-serif;
     }
     
-    nav#mainMenu li a strong {
+    nav#mainMenu ul.menu-root li.top-level-item > li a strong {
       font-weight: 600;
       color: rgba(255,255,255,0.5);
     }
@@ -222,12 +228,12 @@
 
   <section id="intro">
     <nav id="mainMenu">
-      <ul>
-        <li><a href="#">Getting Started</a></li>
-        <li><a href="#">Documentation</a></li>
-        <li><a href="https://github.com/data-studio/angular-app">Angular <strong>APP</strong></a></li>
-        <li><a href="#">Auth <strong>SVC</strong></a></li>
-        <li><a href="https://github.com/data-studio/entity-svc">Entity <strong>SVC</strong></a></li>
+      <ul class="menu-root">
+        <li class="top-level-item"><a href="#">Getting Started</a></li>
+        <li class="top-level-item"><a href="#">Documentation</a></li>
+        <li class="top-level-item"><a href="https://github.com/data-studio/angular-app">Angular <strong>APP</strong></a></li>
+        <li class="top-level-item"><a href="#">Auth <strong>SVC</strong></a></li>
+        <li class="top-level-item"><a href="https://github.com/data-studio/entity-svc">Entity <strong>SVC</strong></a></li>
       </ul>
     </nav>
   </section>
