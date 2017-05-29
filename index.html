@@ -10,24 +10,28 @@
   <meta property="og:title" content="Data Studio Website" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://data-studio.github.io/" />
-  <meta property="og:image" content="https://data-studio.github.io/data-studio.png" />
+  <meta property="og:image" content="https://s3-ap-southeast-2.amazonaws.com/data-studio/pub/assets/data-studio.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <base href="https://data-studio.github.io/">
 
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Oswald:400,600" rel="stylesheet">
   <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet" type="text/css">
 
-  <link href="app.css" rel="stylesheet">
+  <link href="https://s3-ap-southeast-2.amazonaws.com/data-studio/pub/assets/app.css" rel="stylesheet">
 
 </head>
 <body>
 
   <header>
-    <img id="ewaLoaderLogo"
-      src="data-studio.png">
+    <div class="logo-bar">
+      <img id="ewaLoaderLogo"
+        src="https://s3-ap-southeast-2.amazonaws.com/data-studio/pub/assets/data-studio.png">
+    </div>
     <h1>Data Studio</h1>
   </header>
 
@@ -77,7 +81,7 @@
     html, body { height: 100%; width: 100%; overflow: hidden; }
     body { background-color: #fff; overflow-y: scroll; }
     header {
-      background-color: #424242;
+      background-color: #880E4F;
       text-align: center;
       padding-top: 32px;
     }
@@ -87,15 +91,21 @@
       line-height: 1;
       text-align: center;
       font-size: 3em;
-      color: rgba(255,255,255,0.5);
-      background: #424242;
+      color: rgba(255,255,255,1);
+      background: #AD1457;
       padding: 24px 0 32px;
       box-shadow: 0px -2px 20px rgba(0,0,0,0.5);
+      margin-top: 0;
     }
-    header img#ewaLoaderLogo {
+    header div.logo-bar {
+      height: 160px;
+      margin-top: 0;
+      overflow: hidden;
+    }
+    header div.logo-bar img#ewaLoaderLogo {
       opacity: 1;
-      width: 128px;
-      height: 128px;
+      width: 256px;
+      height: 256px;
       margin: 0 auto;
       display: block;
     }
@@ -263,7 +273,7 @@
         function createAppJsScriptEl () {
           return new NewElem('script', {
             id: 'appJs',
-            src: 'app.js',
+            src: v + '/app.js',
           });
         }
 
@@ -298,6 +308,6 @@
 
       }
 
-    })(window);
+    })(window, 'https://s3-ap-southeast-2.amazonaws.com/data-studio/pub/assets');
 
   </script>
