@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 <head>
-  
+
   <meta charset="UTF-8">
-  
+
   <title>Data Studio</title>
 
   <meta property="og:site_name" content="Data Studio" />
@@ -14,17 +14,17 @@
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
-  
+
   <base href="https://data-studio.github.io/">
-  
+
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Oswald:400,600" rel="stylesheet">
   <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet" type="text/css">
-  
+
   <link href="app.css" rel="stylesheet">
-  
+
 </head>
 <body>
-  
+
   <header>
     <img id="ewaLoaderLogo"
       src="data-studio.png">
@@ -54,14 +54,14 @@
     <p>Created by <a href="https://www.eviratec.com.au">Eviratec</a></p>
     <p>Copyright &copy; 2017 <a href="https://github.com/eviratec">Callan Peter Milne</a></p>
   </footer>
-  
+
   <style id="dataStudioStylesheet" type="text/css">
-  
-    /** 
+
+    /**
      * Copyright (c) 2017 Callan Peter Milne
-     * 
+     *
      * Permission to use, copy, modify, and/or distribute this software for any
-     * purpose with or without fee is hereby granted, provided that the above 
+     * purpose with or without fee is hereby granted, provided that the above
      * copyright notice and this permission notice appear in all copies.
      *
      * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
@@ -72,7 +72,7 @@
      * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
      * PERFORMANCE OF THIS SOFTWARE.
      */
-    
+
     h1, h2, h3 { font-family: 'Bree Serif', serif; font-weight: 500; }
     html, body { height: 100%; width: 100%; overflow: hidden; }
     body { background-color: #fff; overflow-y: scroll; }
@@ -90,6 +90,7 @@
       color: rgba(255,255,255,0.5);
       background: #424242;
       padding: 24px 0 32px;
+      box-shadow: 0px -2px 20px rgba(0,0,0,0.5);
     }
     header img#ewaLoaderLogo {
       opacity: 1;
@@ -101,21 +102,23 @@
 
     nav#mainMenu ul {
       margin: 0 auto;
-      padding: 16px;
+      padding: 16px 32px;
       list-style-type: none;
       width: 440px;
       background-color: rgba(255,255,255,0.1);
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     nav#mainMenu ul.menu-root li.top-level-item {
       text-align: center;
-      margin: 16px;
+      margin: 16px 0;
     }
 
     nav#mainMenu ul.menu-root li.top-level-item > a {
       line-height: 1;
       display: inline-block;
-      width: 400px;
+      width: 100%;
       font-size: 1.3em;
       padding: 16px 0;
       background-color: #0091EA;
@@ -138,7 +141,7 @@
       border-bottom: 1px solid #ccc;
       cursor: default;
     }
-    
+
     nav#mainMenu ul.menu-root li.top-level-item > a.unready,
     nav#mainMenu ul.menu-root li.top-level-item > a.unready strong {
       color: rgba(0,0,0,0.37);
@@ -172,17 +175,17 @@
       font-weight: 600;
     }
   </style>
-  
+
   <script>
   </script>
 
   <script id="ewaLoaderInitJs">
-  
-    /** 
+
+    /**
      * Copyright (c) 2017 Callan Peter Milne
-     * 
+     *
      * Permission to use, copy, modify, and/or distribute this software for any
-     * purpose with or without fee is hereby granted, provided that the above 
+     * purpose with or without fee is hereby granted, provided that the above
      * copyright notice and this permission notice appear in all copies.
      *
      * THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
@@ -193,7 +196,7 @@
      * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
      * PERFORMANCE OF THIS SOFTWARE.
      */
-    
+
     (function(P,o,l,y,f,i,ll){"use strict";
       if (typeof P.assign != 'function') {
         P.assign = function(target, varArgs) { // .length of function is 2
@@ -240,7 +243,7 @@
         init();
 
         function init () {
-        
+
           baseEl.setAttribute('ng-app', name);
 
           appScriptEl = createAppJsScriptEl();
@@ -250,7 +253,7 @@
           });
           baseEl.appendChild(appScriptEl.$el);
 
-          
+
         }
 
         function createAppRootEl () {
@@ -267,7 +270,7 @@
       }
 
       function NewElem (type, attrs) {
-        
+
         var attrKeys;
         var hasAttrs;
         var newElem;
