@@ -1,0 +1,130 @@
+html,
+body {
+  background: #d8d8d8;
+  padding: 0;
+}
+
+body {
+  line-height: 1.4;
+  padding: 24px;
+}
+
+body #docs {
+  max-width: 960px;
+  margin: 20px auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+body #docs .documentation-page .page-content {
+  padding: 0 32px;
+  width: 100%;
+  background-color: #fff;
+}
+
+    h1, h2, h3 { font-family: 'Bree Serif', serif; font-weight: 500; }
+    html, body { height: 100%; width: 100%; overflow: hidden; }
+    body { background-color: #fff; overflow-y: scroll; }
+    header {
+      background-color: #880E4F;
+      text-align: center;
+      padding-top: 32px;
+    }
+    header h1 {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      line-height: 1;
+      text-align: center;
+      color: rgba(255,255,255,1);
+      background: #AD1457;
+      padding: 16px 0 16px;
+      box-shadow: 0px -2px 20px rgba(0,0,0,0.5);
+      margin: 0;
+    }
+    header div.logo-bar {
+      height: 80px;
+      margin-top: 0;
+      overflow: hidden;
+    }
+    header div.logo-bar img#ewaLoaderLogo {
+      opacity: 1;
+      width: 128px;
+      height: 128px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    nav#mainMenu ul {
+      margin: 0 auto;
+      padding: 16px 32px;
+      list-style-type: none;
+      width: 440px;
+      background-color: rgba(255,255,255,0.1);
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item {
+      text-align: center;
+      margin: 16px 0;
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item > a {
+      line-height: 1;
+      display: inline-block;
+      width: 100%;
+      font-size: 1.3em;
+      padding: 16px 0;
+      background-color: #0091EA;
+      text-decoration: none;
+      color: rgba(255,255,255,1);
+      border-radius: 3px;
+      background-image: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+      border-bottom: 1px solid #0277BD;
+      text-transform: uppercase;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item > a strong {
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item > a.unready {
+      background-color: #ddd;
+      border-bottom: 1px solid #ccc;
+      cursor: default;
+    }
+
+    nav#mainMenu ul.menu-root li.top-level-item > a.unready,
+    nav#mainMenu ul.menu-root li.top-level-item > a.unready strong {
+      color: rgba(0,0,0,0.37);
+    }
+
+    footer {
+      margin-top: 24px;
+      border-top: 1px solid rgba(0,0,0,0.12);
+      padding: 24px 0 32px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 16px;
+      font-size: 0.77rem;
+      color: rgba(0,0,0,0.58);
+      color: rgba(0,0,0,0.87);
+      text-align: center;
+    }
+
+    footer p a {
+      text-decoration: none;
+      color: #6200EA;
+    }
+
+    footer p:nth-of-type(1) {
+      font-size: 1rem;
+    }
+
+    footer p:nth-of-type(1) a {
+      font-weight: 600;
+    }

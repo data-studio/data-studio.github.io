@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>A little Angular site</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+  <link rel="stylesheet" href="styles/app.css">
+</head>
+
+<body ng-app="MyApp" 
+      ng-cloak
+      layout-align="center start"
+      layout>
+ 
+  <div id="docs"
+       md-whiteframe="1dp"
+       layout="row"
+       layout-fill>
+    <md-sidenav md-is-locked-open="$mdMedia('gt-md')"
+       md-whiteframe="1dp">
+      <header>
+        <div class="logo-bar">
+          <img id="ewaLoaderLogo" src="https://s3-ap-southeast-2.amazonaws.com/data-studio/pub/assets/data-studio.png">
+        </div>
+        <h1 class="md-title">Documentation</h1>
+      </header>
+      <md-content>
+        <md-tabs md-dynamic-height="" md-border-bottom="">
+          <md-tab label="Contents">
+            <md-content class="md-padding" ng-controller="TabOne">
+              <pre ng-if="false">{{title}}</pre>
+              <p ng-repeat="$location in niceLocations"
+                 ng-if="$location !== ''"
+                 ng-click="openDocPage($location)">
+                {{$location.name}}
+              </p>
+              <div ng-repeat="$prefix in nicePrefixes">
+                <p ng-click="expand($prefix)">
+                  <strong>
+                    {{$prefix.name}}
+                  </strong>
+                </p>
+                <div ng-if="expanded[$prefix.original] === true">
+                  <p ng-repeat="$subPrefix in $prefix.nicePrefixes"
+                     ng-if="$subPrefix.original !== '/'"
+                     ng-click="expand($subPrefix)">
+                    <strong>
+                      {{$subPrefix.name}}
+                    </strong>
+                  </p>
+                  <p ng-repeat="$location in $prefix.locations"
+                     ng-if="$location.name !== ''"
+                     ng-click="openDocPage($location)">
+                    {{$location.name}}
+                  </p>
+                </div>
+              </div>
+            </md-content>
+          </md-tab>
+          <md-tab label="Search">
+            <md-content class="md-padding">
+              <h1 class="md-display-2">Tab Two</h1>
+              What for?
+            </md-content>
+          </md-tab>
+        </md-tabs>
+      </md-content>
+    </md-sidenav>
+
+    <div flex>
+
+      <div layout="column"
+           layout-fill>
+
+        <div class="documentation-page"
+             layout
+             flex>
+          <md-content class="page-content"
+                      flex>
+            <textarea ng-model="md"></textarea>
+            <doc-page ng-model="visiblePage">
+            </doc-page>
+          </md-content>
+        </div>
+
+      </div>
+
+    </div>
+  
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  
+  <script src="https://cdn.rawgit.com/showdownjs/showdown/1.6.4/dist/showdown.min.js"></script>
+  
+  <script src="scripts/app.js"></script>
+  <script src="scripts/app-S3Object.js"></script>
+  <script src="scripts/app-S3Bucket.js"></script>
+  <script src="scripts/app-TabOneController.js"></script>
+  <script src="scripts/app-doc-page.js"></script>
+  
+</body>
+
+</html>
